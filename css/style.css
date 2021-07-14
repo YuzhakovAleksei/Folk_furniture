@@ -56,6 +56,7 @@ body {
 
 /* min-height: 100vh; отвечает за высоту экрана, без него не окроется полный экран. */
 .wrapper {
+	max-width: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -91,7 +92,7 @@ body {
 
 .header {
 	display: flex;
-	align-items: left;
+	justify-content: left;
 	background-color: #fff;
 	width: 100%;
 	height: 10.2vw;
@@ -153,8 +154,13 @@ body {
 
 .image-slider {
 	overflow: hidden;
+	background-color: var(--main_dark);
+}
+
+.swiper-wrapper {
+	height: 82vh;
 }
 
 .image-frame img {
-	width: 100%;
+	height: 100%;
 }

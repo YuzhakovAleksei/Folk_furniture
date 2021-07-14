@@ -112,7 +112,7 @@ const swiperPages = new Swiper('.image-slider', {
   // },
 
   // слайдер будет подстраиваться по высоту слайда true
-  autoHeight: true,
+  autoHeight: false,
 
   // показ количества слайдов за раз, можно указывать дробные числа.
   slidesPerView: 1,
