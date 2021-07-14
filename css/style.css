@@ -151,6 +151,10 @@ body {
 
 /* ------------ slider ------------- */
 
+.image-slider {
+	overflow: hidden;
+}
+
 .image-frame img {
 	width: 100%;
 }

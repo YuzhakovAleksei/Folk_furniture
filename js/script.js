@@ -23,7 +23,7 @@ if (burger){
     });
   }
 
-const swiperPages = new Swiper('.pages__image-slider', {
+const swiperPages = new Swiper('.image-slider', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
