@@ -32,7 +32,7 @@ const swiperPages = new Swiper('.image-slider', {
     // el: '.swiper-pagination',
     // параметр el это класс обьекта куда будет размещаться пагинация
   //   el: '.pagination-place',
-    el: '.pages-swiper-pagination',
+    el: '.swiper-pagination',
 
     // clickable: true,
 
