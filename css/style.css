@@ -70,9 +70,12 @@ body {
 }
 
 .devider {
+	align-items: center;
 	min-height: 42.5vh;
 	background-color: var(--main_green);
 }
+
+
 
 .item__body {
 	flex: 1 1 auto;
@@ -106,6 +109,7 @@ body {
 .logo_devider {
   width: 16vw;
   height: 13.5vw;
+  justify-content: center;
   padding: 0;
   background-color: #fff;
   padding: 2.5vw;
@@ -188,6 +192,13 @@ body {
   align-self: flex-start;
 }
 
+.devider_text {
+  padding-left: 14vw;
+  align-self: center;
+  color: #fff;
+  text-shadow: var(--main_dark) 0 0 5px;
+}
+
 .section__heading {
   align-self: center;
 	font-size: 4.3vw;
@@ -227,6 +238,10 @@ body {
 .card img {
   text-align: center;
   height: 100%;
+}
+
+.footer {
+  background-color: #000;
 }
 
 
