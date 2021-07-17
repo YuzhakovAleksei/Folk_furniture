@@ -255,6 +255,56 @@
 
     <footer class="section__item-card footer">
 
+      <!--------------------- Yandex map ----------------------->
+
+      <div class="yandex-map">
+        <div id="FF_Map1" style="width: 42vw; height: 30vw"></div>
+
+          <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+          <script type="text/javascript">
+            // Функция ymaps.ready() будет вызвана, когда
+            // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+            ymaps.ready(init);
+            function init(){
+                // Создание карты.
+                var myMap = new ymaps.Map("FF_Map1", {
+                  // Координаты центра карты.
+                  // Порядок по умолчанию: «широта, долгота».
+                  // Чтобы не определять координаты центра карты вручную,
+                  // воспользуйтесь инструментом Определение координат.
+                  center: [52.966997, 36.077501],
+                  // Уровень масштабирования. Допустимые значения:
+                  // от 0 (весь мир) до 19.
+                  zoom: 18
+                });
+
+                // var myGeoObject = new ymaps.GeoObject({
+                //   geometry: {
+                //       type: "Point", // тип геометрии - точка
+                //       coordinates: [52.966997, 36.077501] // координаты точки
+                //   }
+                // });
+
+                var myPlacemark = new ymaps.Placemark([52.966997, 36.077501], {}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/FF_MapPointer.svg',
+                    iconImageSize: [111, 160],
+                    iconImageOffset: [-60, -150]
+                });
+
+                // myMap.geoObjects.add(myGeoObject);
+                myMap.geoObjects.add(myPlacemark);
+            }
+          </script>
+        </div>
+        <div class="contact__block">
+          <h3>КОНТАКТЫ</h3>
+          <div class="phone__block">
+            <a href="tel:+79606440944" class="menu__link">+7 960 644 09 44</a>
+          </div>
+          <p>ТЦ  "РАДУГА", <br> главный вход, 3 этаж.</p>
+          <p>график работы: с 9 до 20</p>
+        </div>
     </footer>
 
   </div>
