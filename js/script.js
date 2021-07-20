@@ -1,27 +1,26 @@
-// мобильное меню
-
 // Создаём объект iconMenu из класса .menu__icon (иконка бургер)
-const stairType = document.querySelector('.mob-item-type');
-const arrow = document.querySelector('.menu__arrow');
-const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('.mobile-menu__container');
+const actionButton = document.querySelector('.action');
+const actBlock = document.querySelector('.action__block');
+// const burger = document.querySelector('.burger');
+// const mobileMenu = document.querySelector('.mobile-menu__container');
 // Делаем проверку, есть ли такой класс
-if (stairType){
+if (actionButton){
   // Создаём событие click по иконке
-  stairType.addEventListener("click", function(e) {
-    stairType.classList.toggle('_active');
+  actionButton.addEventListener("click", function(e) {
+    actBlock.classList.toggle('_active');
+    // console.log(actBlock)
     // создаём переключение, добавляем класс _active к .menu__body (nav)
-    arrow.classList.toggle('_active');
+    // arrow.classList.toggle('_active');
   });
 }
 
-if (burger){
-    // Создаём событие click по иконке
-    burger.addEventListener("click", function(e) {
-      burger.classList.toggle('_active');
-      mobileMenu.classList.toggle('_active');
-    });
-  }
+// if (burger){
+//     // Создаём событие click по иконке
+//     burger.addEventListener("click", function(e) {
+//       burger.classList.toggle('_active');
+//       mobileMenu.classList.toggle('_active');
+//     });
+//   }
 
 const swiperPages = new Swiper('.image-slider', {
   // Optional parameters

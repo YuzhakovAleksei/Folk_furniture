@@ -75,9 +75,62 @@ body {
 	background-color: var(--main_green);
 }
 
+.action__block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding: 5vw 8vw 5vw 8vw;
+  bottom: 100vh;
+  width: 100%;
+  align-items: center;
+  background-color: var(--main_green);
+	height: 82vh;
+  transition: bottom 300ms ease-in-out
+}
 
+.action__block._active {
+  bottom: 0vh;
+}
+
+.action__wrapper {
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
+.action__heading {
+  display: flex;
+  width: 100%;
+  height: 9vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.action__block h1 {
+  color: var(--main_red);
+  font-size: 5vw;
+  padding-left: 10vw;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/gift_red.svg);
+}
+
+.gift__list li {
+  color: #fff;
+  font-size: 3vw;
+  padding-left: 6vw;
+  margin-top: 2.5vw;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/check-square_white.svg);
+}
 
 .item__body {
+  position: relative;
 	flex: 1 1 auto;
 	width: 100%;
 	margin: 0 auto;
@@ -92,6 +145,7 @@ body {
 }
 
 .header {
+  z-index: 7;
 	display: flex;
 	justify-content: left;
 	background-color: #fff;
@@ -143,14 +197,17 @@ body {
 .action {
 	width: 13.2vw;
 	height: 3.1vw;
+  cursor: pointer;
 	text-align: center;
 	padding-top: 0.7vw;
 	border-radius: 1vw;
 	background-color: var(--main_red);
 }
 
-.phone__block a {
+.phone__link {
+  display: block;
 	font-size: 1.25vw;
+  line-height: 1.8vw;
 	color: var(--main_dark);
 	background-repeat: no-repeat;
 	padding: 0.6vw 0 1vw 3vw;
@@ -248,9 +305,18 @@ body {
   color: #fff;
 }
 
+.contact__block :not(:last-child) {
+  padding-bottom: 2.5vw;
+}
+
+.contact__block :not(:first-child) {
+  font-size: 2vw;
+  padding-bottom: 2.5vw;
+}
+
 .contact__block a {
   color: #fff;
-  background-image: url(../img/mobile-alt.svg);
+  background-image: url(../img/mobile-alt_Wt.svg);
 }
 
 .contact__block h3 {
@@ -259,10 +325,10 @@ body {
   text-align: center;
 }
 
-.contact__block p {
+/* .contact__block p {
   font-size: 2vw;
   line-height: 2.5vw;
-}
+} */
 
 /* ------------ slider ------------- */
 
@@ -286,6 +352,7 @@ body {
 }
 
 .swiper-pagination-fraction {
+  z-index: 3;
 	color: var(--main_dark);
 	font-size: 1.2vw;
 	bottom: 23px;
