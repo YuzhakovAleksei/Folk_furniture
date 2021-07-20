@@ -153,9 +153,7 @@ body {
 	font-size: 1.25vw;
 	color: var(--main_dark);
 	background-repeat: no-repeat;
-	text-align: center;
 	padding: 0.6vw 0 1vw 3vw;
-	height: 2vw;
 	background-size: 2vw;
 	background-image: url(../img/mobile-alt.svg);
 }
@@ -258,14 +256,12 @@ body {
 .contact__block h3 {
   letter-spacing: 0.1vw;
   font-size: 2vw;
-  padding-bottom: 3vw;
   text-align: center;
 }
 
 .contact__block p {
   font-size: 2vw;
   line-height: 2.5vw;
-  padding: 2vw 0;
 }
 
 /* ------------ slider ------------- */
