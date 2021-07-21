@@ -3,6 +3,7 @@
 	--main_dark: #1a1b1c;
 	--main_red: #E31E35;
 	--swiper-theme-color: var(--main_green);
+  --header-height: 18.15vh;
 }
 
 @font-face {
@@ -80,13 +81,13 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 5;
-  padding: 5vw 8vw 5vw 8vw;
+  padding: 7vh 5vh 7vh 5vh;
   bottom: 100vh;
   width: 100%;
   align-items: center;
   background-color: var(--main_green);
-	height: 82vh;
-  transition: bottom 300ms ease-in-out
+	height: calc(100vh - var(--header-height));
+  transition: bottom 300ms ease-in-out;
 }
 
 .action__block._active {
@@ -104,7 +105,7 @@ body {
 .action__heading {
   display: flex;
   width: 100%;
-  height: 9vw;
+  height: 14vh;
   justify-content: center;
   align-items: center;
   background-color: #fff;
@@ -112,8 +113,8 @@ body {
 
 .action__block h1 {
   color: var(--main_red);
-  font-size: 5vw;
-  padding-left: 10vw;
+  font-size: 8.5vh;
+  padding-left: 19vh;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-image: url(../img/gift_red.svg);
@@ -121,9 +122,9 @@ body {
 
 .gift__list li {
   color: #fff;
-  font-size: 3vw;
-  padding-left: 6vw;
-  margin-top: 2.5vw;
+  font-size: 5.5vh;
+  padding-left: 11vh;
+  margin-top: 4.5vh;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-image: url(../img/check-square_white.svg);
@@ -150,7 +151,7 @@ body {
 	justify-content: left;
 	background-color: #fff;
 	width: 100%;
-	height: 10.2vw;
+	height: var(--header-height);
 }
 
 .logo__block {
@@ -188,6 +189,12 @@ body {
 	background-color: var(--main_green);
 }
 
+.menu_down a:hover,
+.menu_down a:active,
+.menu_down a:focus {
+  text-decoration: underline;
+}
+
 .menu__link {
 	font-size: 2.1vw;
 	line-height: 1vw;
@@ -204,6 +211,10 @@ body {
 	background-color: var(--main_red);
 }
 
+.action:hover {
+  text-decoration: underline;
+}
+
 .phone__link {
   display: block;
 	font-size: 1.25vw;
@@ -213,6 +224,12 @@ body {
 	padding: 0.6vw 0 1vw 3vw;
 	background-size: 2vw;
 	background-image: url(../img/mobile-alt.svg);
+}
+
+.phone__link:hover,
+.phone__link:active,
+.phone__link:focus {
+  text-decoration: underline  ;
 }
 
 .section__item-card {
@@ -270,11 +287,15 @@ body {
   justify-content: space-between;
 }
 
+.card__block :not(:last-child) {
+  margin-right: 5vw;
+}
+
 .card {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 24.5vw;
+  /* width: 24.5vw; */
   height: 28.5vw;
   border-radius: 1vw;
   overflow: hidden;
@@ -339,7 +360,7 @@ body {
 
 .swiper-wrapper {
   text-align: center;
-	height: 82vh;
+	height: calc(100vh - var(--header-height));
 }
 
 .image-frame img {
