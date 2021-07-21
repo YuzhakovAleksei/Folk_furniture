@@ -49,6 +49,7 @@ li {
 /* для body, height: 100%; Обязательно должно быть указано, чтобы всё правильно работало */
 html,
 body {
+  scroll-behavior: smooth;
 	height: 100%;
 	margin: 0;
   	padding: 0;
@@ -62,6 +63,24 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+
+.return {
+  z-index: 10;
+  position: fixed;
+  width: 5vw;
+  right: 1.1vw;
+  bottom: 5vw;
+  display: none;
+}
+
+.return img {
+  width: 4vw;
+  opacity: 0.5;
+}
+
+.return_show {
+  display: block;
 }
 
 .section__item {
@@ -157,12 +176,18 @@ body {
 .menu_top .social img {
   width: 3vw;
   filter: brightness(0.3);
+  transition: filter 300ms ease-in-out, width 300ms ease-in-out;
 }
 
 .menu_top .social img:hover,
 .menu_top .social img:active,
 .menu_top .social img:focus {
-  border-bottom: 2px solid var(--main_dark);
+  width: 3.5vw;
+}
+
+.menu_top .social img:active,
+.menu_top .social img:focus {
+  filter: brightness(0.9);
 }
 
 .logo__block {
@@ -202,7 +227,10 @@ body {
 
 .menu_down a:hover,
 .menu_down a:active,
-.menu_down a:focus {
+.menu_down a:focus,
+.menu_top a:hover,
+.menu_top a:active,
+.menu_top a:focus {
   text-decoration: underline;
 }
 
@@ -210,6 +238,10 @@ body {
 	font-size: 2.1vw;
 	line-height: 1vw;
 	color: #fff;
+}
+
+.contacts_link {
+  color: var(--main_dark);
 }
 
 .action {

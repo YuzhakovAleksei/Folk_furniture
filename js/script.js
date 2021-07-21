@@ -6,6 +6,24 @@ if (actionButton){
   });
 }
 
+// return
+
+const return_btn = document.querySelector('.return');
+
+window.addEventListener('scroll', eventScroll);
+
+function eventScroll() {
+  let scrolled = window.pageYOffset;
+  let coords = document.documentElement.clientHeight;
+
+  if (scrolled > coords) {
+    return_btn.classList.add('return_show');
+  }
+  if (scrolled < coords) {
+    return_btn.classList.remove('return_show');
+  }
+}
+
 // if (burger){
 //     // Создаём событие click по иконке
 //     burger.addEventListener("click", function(e) {
