@@ -77,10 +77,18 @@ body {
 .return img {
   width: 4vw;
   opacity: 0.5;
+  transition: opacity 300ms ease-in-out, filter 300ms ease-in-out;
 }
 
 .return_show {
   display: block;
+}
+
+.return img:hover,
+.return img:active,
+.return img:focus {
+  opacity: 1;
+  filter: brightness(2);
 }
 
 .section__item {
