@@ -154,6 +154,17 @@ body {
 	height: var(--header-height);
 }
 
+.menu_top .social img {
+  width: 3vw;
+  filter: brightness(0.3);
+}
+
+.menu_top .social img:hover,
+.menu_top .social img:active,
+.menu_top .social img:focus {
+  border-bottom: 2px solid var(--main_dark);
+}
+
 .logo__block {
 	display: flex;
 	justify-content: flex-end;
@@ -335,7 +346,7 @@ body {
   padding-bottom: 2.5vw;
 }
 
-.contact__block a {
+.contact__block .phone__link {
   color: #fff;
   background-image: url(../img/mobile-alt_Wt.svg);
 }
@@ -344,12 +355,31 @@ body {
   letter-spacing: 0.1vw;
   font-size: 2vw;
   text-align: center;
+  color: var(--main_green);
 }
 
-/* .contact__block p {
-  font-size: 2vw;
-  line-height: 2.5vw;
-} */
+.vk__block {
+  display: flex;
+  justify-content: left;
+  height: 7vw;
+}
+
+.vk__block img {
+  filter: brightness(1.7);
+}
+
+.vk__block span {
+  color: #fff;
+  width: 24vw;
+}
+
+.vk__block span:hover {
+  text-decoration: underline;
+}
+
+.social {
+  background-image: none;
+}
 
 /* ------------ slider ------------- */
 
