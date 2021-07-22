@@ -1,10 +1,25 @@
 const actionButton = document.querySelector('.action');
+const mobActionButton = document.querySelector('#mob_action');
 const actBlock = document.querySelector('.action__block');
-if (actionButton){
+const burger = document.querySelector('.burger');
+
+if (actionButton && mobActionButton){
+  // console.log(1)
   actionButton.addEventListener("click", function(e) {
     actBlock.classList.toggle('_active');
   });
+  mobActionButton.addEventListener("click", function(e) {
+    actBlock.classList.toggle('_active');
+  });
 }
+
+// if (mobActionButton){
+//   mobActionButton.addEventListener("click", function(e) {
+//     actBlock.classList.toggle('_active');
+//   });
+// }
+
+
 
 // return
 
@@ -22,15 +37,15 @@ function eventScroll() {
   if (scrolled < coords) {
     return_btn.classList.remove('return_show');
   }
-}
+};
 
 // if (burger){
 //     // Создаём событие click по иконке
 //     burger.addEventListener("click", function(e) {
 //       burger.classList.toggle('_active');
-//       mobileMenu.classList.toggle('_active');
+//       mobile Menu.classList.toggle('_active');
 //     });
-//   }
+
 
 const swiperPages = new Swiper('.image-slider', {
   direction: 'horizontal',
