@@ -541,7 +541,7 @@ body {
     display: block;
     position: relative;
     height: 50vh;
-    padding-top: 3vh;
+    padding-top: 5vh;
     background-color: var(--main_dark);
   }
 
@@ -682,6 +682,12 @@ body {
   .image-frame img {
     height: auto;
     width: 100%;
+  }
+
+  .swiper-pagination-fraction {
+    color: var(--main_green);
+    font-size: 3vw;
+    bottom: 46vh;
   }
 
   /* ------------- footer ------------- */
