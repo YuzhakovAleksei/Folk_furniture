@@ -262,13 +262,21 @@ body {
 	background-color: var(--main_red);
 }
 
+.action:before {
+  content: 'акция!';
+}
+
+.action._active:before {
+  content: 'X';
+}
+
 .action:hover {
   text-decoration: underline;
 }
 
 .phone__link {
   display: block;
-	font-size: 1.25vw;
+	font-size: 2vw;
   line-height: 1.8vw;
 	color: var(--main_dark);
 	background-repeat: no-repeat;
@@ -381,17 +389,10 @@ body {
 }
 
 .contact__block {
-  width: 35vw;
+  width: 100%;
   color: #fff;
-}
-
-.contact__block :not(:last-child) {
-  padding-bottom: 2.5vw;
-}
-
-.contact__block :not(:first-child) {
+  padding-left: 6vw;
   font-size: 2vw;
-  padding-bottom: 2.5vw;
 }
 
 .contact__block .phone__link {
@@ -399,35 +400,50 @@ body {
   background-image: url(../img/mobile-alt_Wt.svg);
 }
 
-.contact__block h3 {
+.contact__sub-name {
   letter-spacing: 0.1vw;
   font-size: 2vw;
   text-align: center;
   color: var(--main_green);
 }
 
-.vk__block {
-  display: flex;
-  justify-content: left;
-  height: 7vw;
+.contact__block :not(:first-child) {
+  margin-top: 3vw;
+}
+.social {
+  display: block;
 }
 
-.vk__block img {
+.social img {
   filter: brightness(1.7);
 }
 
-.vk__block span {
+.social span {
   color: #fff;
-  width: 24vw;
+  width: 100%;
+  padding-left: 4vw;
+  background-repeat: no-repeat;
+  background-image: url(../img/vk.png);
+  background-size: auto 100%;
 }
 
-.vk__block span:hover {
+.soc_instagram span {
+  background-image: url(../img/instagram.png);
+}
+
+.link_mail span {
+  background-image: url(../img/email_icon_circle.png);
+}
+
+.social span:hover {
   text-decoration: underline;
 }
 
-.social {
-  background-image: none;
+.ya__map {
+  width: 42vw;
+  height: 100%;
 }
+
 
 
 
@@ -440,7 +456,7 @@ body {
 
 .swiper-wrapper {
   text-align: center;
-	height: 92vh;
+	height: 82vh;
 }
 
 .image-frame img {
@@ -451,6 +467,7 @@ body {
 .swiper-button-next {
 	top: 58%;
 }
+
 
 .swiper-pagination-fraction {
   z-index: 3;
@@ -468,6 +485,7 @@ body {
   }
 
   .header__mobile {
+    z-index: 7;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -475,6 +493,11 @@ body {
     padding: 0 4vw;
     background-color: var(--main_green);
 
+  }
+
+  .header__mobile h1 {
+    font-size: 4vw;
+    color: #fff;
   }
 
   .logo__mobile {
@@ -485,11 +508,33 @@ body {
   .logo__mobile img {
     height: 8vw;
     width: 8vw;
+  }
 
+  .return {
+    right: 15vw;
+  }
+
+  .return img {
+    width: 15vw;
   }
 
   .header {
     display: none;
+  }
+
+  .action {
+    width: 17vw;
+    height: 6vw;
+    padding: 2.2vw 0;
+    font-size: 3vw;
+  }
+
+  .action:before {
+    content: 'акция!';
+  }
+
+  .action._active:before  {
+    content: 'Х';
   }
 
   .mobile-menu__container {
@@ -638,5 +683,51 @@ body {
     height: auto;
     width: 100%;
   }
+
+  /* ------------- footer ------------- */
+
+  .footer {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .contact__block {
+    font-size: 5vw;
+  }
+
+  .phone__link {
+    font-size: 5vw;
+    padding: 1.9vw 0 3vw 9vw;
+    background-size: 4vw;
+  }
+
+  .contact__block {
+    padding-left: 0;
+    padding-top: 4vw;
+  }
+
+  .social span {
+    padding-left: 9vw;
+  }
+
+  .contact__sub-name {
+    font-size: 7vw;
+  }
+
+  .contact__block :not(:first-child) {
+    margin-top: 4vw;
+  }
+
+  .ya__map {
+    width: 100%;
+    height: 50vw;
+  }
+
+
+  .contact__block {
+    width: 100%;
+  }
+
+
 
 }

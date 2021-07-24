@@ -7,9 +7,11 @@ if (actionButton && mobActionButton){
   // console.log(1)
   actionButton.addEventListener("click", function(e) {
     actBlock.classList.toggle('_active');
+    actionButton.classList.toggle('_active');
   });
   mobActionButton.addEventListener("click", function(e) {
     actBlock.classList.toggle('_active');
+    mobActionButton.classList.toggle('_active');
   });
 }
 
